@@ -1,0 +1,30 @@
+[
+  {
+    "file": "remote_pilot_study_guide.pdf",
+    "pages": 88,
+    "chars": 173663,
+    "images": 30,
+    "text": "extracted/remote_pilot_study_guide.txt"
+  },
+  {
+    "file": "uas_acs.pdf",
+    "pages": 35,
+    "chars": 48901,
+    "images": 1,
+    "text": "extracted/uas_acs.txt"
+  },
+  {
+    "file": "uag_sample_questions.pdf",
+    "pages": 11,
+    "chars": 17445,
+    "images": 0,
+    "text": "extracted/uag_sample_questions.txt"
+  },
+  {
+    "file": "ac_107-2A.pdf",
+    "pages": 104,
+    "chars": 269453,
+    "images": 3,
+    "text": "extracted/ac_107-2A.txt"
+  }
+]

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RWY 13 left downwind — walkthrough</title>
+  <style>
+    :root { color-scheme: dark light; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; margin: 0; padding: 24px; max-width: 720px; margin-inline: auto; line-height: 1.5; }
+    h1 { font-size: 1.3rem; margin: 0 0 8px; }
+    h2 { font-size: 1.05rem; margin: 24px 0 8px; }
+    .meta { opacity: 0.7; margin-bottom: 16px; }
+    .step { margin: 12px 0; padding: 12px 14px; border-radius: 8px; background: color-mix(in srgb, CanvasText 7%, transparent); }
+    .step strong { display: block; margin-bottom: 4px; }
+    svg { width: 100%; max-width: 520px; height: auto; display: block; margin: 12px 0; border-radius: 8px; border: 1px solid color-mix(in srgb, CanvasText 18%, transparent); background: #0f172a; }
+    .answer { margin-top: 20px; padding: 14px; border-radius: 8px; border: 2px solid #22c55e; }
+    .hint { opacity: 0.8; font-size: 0.95rem; }
+    code { font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <h1>Why “midfield left downwind to RWY 13” = East</h1>
+  <p class="meta">Cooperstown / Figure 26 · UA.V.A.K3 — stay here until this clicks</p>
+
+  <div class="step">
+    <strong>Step 1 — What “RWY 13” means</strong>
+    Runway numbers are the magnetic heading you’d fly on final, rounded to the nearest 10°, drop the zero.
+    <br/>RWY <b>13</b> → about <b>130°</b> → roughly <b>southeast</b>.
+    So landing aircraft fly toward the southeast end of the runway.
+  </div>
+
+  <div class="step">
+    <strong>Step 2 — Picture the runway as a strip</strong>
+    Align the strip NW ↔ SE. Landing on 13 = entering from the NW end, traveling SE.
+  </div>
+
+<svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Traffic pattern diagram for runway 13 left traffic">
+  <text x="16" y="28" fill="#94a3b8" font-size="14">North ↑</text>
+  <!-- compass -->
+  <text x="480" y="28" fill="#94a3b8" font-size="13" text-anchor="end">E →</text>
+
+  <!-- runway NW-SE -->
+  <g transform="translate(260,170) rotate(40)">
+    <rect x="-110" y="-14" width="220" height="28" rx="4" fill="#64748b"/>
+    <text x="-95" y="5" fill="#0f172a" font-size="14" font-weight="700">31</text>
+    <text x="72" y="5" fill="#0f172a" font-size="14" font-weight="700">13</text>
+    <!-- landing arrow on runway toward 13 -->
+    <path d="M -40 0 L 50 0" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <!-- labels for runway ends -->
+  <text x="145" y="95" fill="#cbd5e1" font-size="13">NW end</text>
+  <text x="355" y="255" fill="#cbd5e1" font-size="13">SE end (13)</text>
+
+  <!-- left = when facing landing direction (SE), left is NE/East side -->
+  <text x="400" y="120" fill="#4ade80" font-size="15" font-weight="700">EAST side</text>
+  <text x="400" y="140" fill="#4ade80" font-size="12">(left of landing path)</text>
+
+  <!-- plane on downwind east of field, flying NW -->
+  <g transform="translate(390,165)">
+    <circle r="10" fill="#4ade80"/>
+    <path d="M 0 0 L -55 -35" stroke="#4ade80" stroke-width="3" marker-end="url(#arrowG)"/>
+  </g>
+  <text x="300" y="55" fill="#4ade80" font-size="14" font-weight="700">✈ midfield LEFT DOWNWIND</text>
+  <text x="300" y="74" fill="#86efac" font-size="12">flying NW (opposite landing)</text>
+
+  <!-- landing direction note -->
+  <text x="40" y="300" fill="#38bdf8" font-size="13">Landing RWY 13 → fly southeast along runway</text>
+  <text x="40" y="320" fill="#94a3b8" font-size="12">“Left” = left when facing that landing direction</text>
+</svg>
+
+  <div class="step">
+    <strong>Step 3 — “Left traffic” is relative to the landing direction</strong>
+    Stand facing the way a landing plane flies (toward SE on RWY 13).
+    Your <b>left hand</b> points toward the <b>northeast / east</b> side of the runway.
+    That’s where the whole left pattern lives (downwind, base, etc.).
+  </div>
+
+  <div class="step">
+    <strong>Step 4 — What “downwind” adds</strong>
+    Downwind = parallel to the runway, <b>opposite</b> the landing heading.
+    So on left downwind to 13 you’re on the east side, flying roughly <b>northwest</b>.
+    “Midfield” just means halfway along the runway length — still on that same east side.
+  </div>
+
+  <div class="step">
+    <strong>Step 5 — Match the answer choices</strong>
+    The exam asks where the aircraft is <em>relative to the runway</em> (which side), not which way it’s pointed.
+    <br/>East side → <b>A</b>
+    <br/>South would be past the SE end (final/upwind area), not midfield downwind.
+    <br/>West would be <em>right</em> traffic for RWY 13.
+  </div>
+
+  <div class="answer">
+    <strong>Answer: A — East</strong>
+    <p class="hint" style="margin:8px 0 0">Quick check on exam day: <code>RWY number → landing heading → face that way → left side = pattern side</code>. For 13, left ≈ east.</p>
+  </div>
+
+  <h2>Tiny drill (no chart)</h2>
+  <div class="step">
+    Left downwind to <b>RWY 27</b> (landing westbound) — which side of the runway?
+    <br/><span class="hint">Face west → left is south → aircraft is <b>South</b> of the runway.</span>
+  </div>
+  <div class="step">
+    Left downwind to <b>RWY 36</b> (landing northbound) — which side?
+    <br/><span class="hint">Face north → left is west → aircraft is <b>West</b> of the runway.</span>
+  </div>
+
+  <p class="hint">When this feels solid, say “ready for Q2” in chat (or ask another RWY orientation drill).</p>
+</body>
+</html>

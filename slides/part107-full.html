@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Part 107 Commercial — Full ACS Study Deck</title>
+<style>
+:root{--bg:#0f1419;--panel:#1a222c;--ink:#e8eef4;--muted:#8b9aab;--accent:#3db8a8;--warn:#e8a04b;--ok:#6bcb8b;--line:#2a3542;--chip:#243040}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.35}
+.top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;gap:.4rem;flex-wrap:wrap;padding:.55rem .8rem;background:rgba(15,20,25,.94);border-bottom:1px solid var(--line)}
+.top button{background:var(--chip);color:#c9d5e2;border:1px solid var(--line);border-radius:999px;padding:.28rem .7rem;font:inherit;font-size:.78rem;cursor:pointer}
+.top button:hover,.top button.on{border-color:var(--accent);color:var(--accent)}
+.deck{height:100%;display:grid;place-items:center;padding:3.6rem 1.1rem 4.5rem}
+.slide{display:none;width:min(980px,100%);min-height:min(640px,calc(100vh - 8rem));background:linear-gradient(165deg,#1c2632,#141b23);border:1px solid var(--line);border-radius:14px;padding:1.7rem 2rem;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.slide.active{display:block}
+.kicker{color:var(--accent);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:0 0 .55rem}
+h1{font-size:clamp(1.45rem,2.8vw,2.1rem);margin:0 0 .7rem;line-height:1.15}
+.lead{color:var(--muted);margin:0 0 1rem;max-width:46rem}
+ul,ol{margin:.35rem 0 0;padding-left:1.15rem}li{margin:.38rem 0;color:#d5dee8}
+.grid{display:grid;gap:.75rem;margin-top:.7rem}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem}
+.card strong{display:block;margin:.15rem 0 .3rem}.card .meta{color:var(--muted);font-size:.86rem}
+.kcard .acs{font-family:ui-monospace,monospace;font-size:.72rem;color:var(--accent);letter-spacing:.04em}
+.trap,.ok-note{margin-top:.9rem;padding:.8rem 1rem;border-radius:0 8px 8px 0}
+.trap{border-left:3px solid var(--warn);background:rgba(232,160,75,.08)}.trap b{color:var(--warn)}
+.ok-note{border-left:3px solid var(--ok);background:rgba(107,203,139,.08)}
+table{width:100%;border-collapse:collapse;margin-top:.55rem;font-size:.92rem}
+th,td{text-align:left;padding:.5rem .55rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
+.num{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:.25rem .65rem;font-size:.8rem;color:#c9d5e2}
+.chip.hot{border-color:var(--warn);color:var(--warn)}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:1rem;padding:.65rem 1rem;background:rgba(15,20,25,.94);border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.bar button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.42rem .75rem;cursor:pointer;font:inherit}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+.progress{flex:1;height:4px;background:var(--line);border-radius:99px;overflow:hidden}.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#5fd0c0);width:0}
+code,.mono{font-family:ui-monospace,monospace}
+code{font-size:.88em;background:#243040;padding:.1rem .35rem;border-radius:4px}
+.outline-btn{cursor:pointer;text-align:left;color:inherit;font:inherit;width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.75rem .85rem}
+.outline-btn:hover{border-color:var(--accent)}
+@media(max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}.slide{padding:1.2rem;min-height:auto}body{font-size:15px}}
+</style>
+</head>
+<body>
+<nav class="top" id="secnav"><button type="button" data-jump="Start">Start</button><button type="button" data-jump="I">I Regs</button><button type="button" data-jump="II">II Airspace</button><button type="button" data-jump="III">III Weather</button><button type="button" data-jump="IV">IV Load</button><button type="button" data-jump="V">V Ops</button><button type="button" data-jump="End">End</button></nav>
+<div class="deck">
+<section class="slide active" data-title="Part 107 Commercial" data-section="Start">
+  <p class="kicker">Commercial Remote Pilot</p>
+  <h1>Part 107 Commercial</h1>
+  
+<p class="lead">FAA Remote Pilot Certificate with sUAS rating — the knowledge test for commercial drone operations under 14 CFR Part 107.</p>
+<div class="grid two">
+  <div class="card"><strong>Exam</strong><span class="meta">60 multiple-choice · 2 hours · 70% to pass · scheduled at a PSI testing center</span></div>
+  <div class="card"><strong>This deck</strong><span class="meta">All ACS Areas of Operation · every knowledge task · teach then quiz</span></div>
+</div>
+<div class="ok-note">Sources: FAA-S-ACS-10B · FAA-G-8082-22 · AC 107-2A · 14 CFR parts 89 &amp; 107</div>
+<p class="lead" style="margin-top:1rem;margin-bottom:0">Keys: → / Space next · ← prev · Esc = contents · click section chips to jump</p>
+
+</section><section class="slide" data-title="How to use" data-section="Start">
+  <p class="kicker">Start</p>
+  <h1>How to use</h1>
+  
+<ol>
+  <li>Work one ACS section at a time (Regulations → Airspace → Weather → Loading → Operations).</li>
+  <li>After each section, drill that topic in your quiz app.</li>
+  <li>Misses → return to the ACS code slide (codes shown on each card).</li>
+  <li>Finish with a mixed timed mock (20–30 Q) before scheduling the real test.</li>
+</ol>
+<div class="trap"><b>Commercial note:</b> Part 107 is what lets you fly sUAS for hire/compensation. Registration + Remote ID + airspace auth still apply on every job.</div>
+<div class="card" style="margin-top:1rem"><strong>Quiz app</strong><span class="meta"><code>quiz-app/</code> · run <code>./start.sh</code> locally</span></div>
+
+</section><section class="slide" data-title="Exam map" data-section="Start">
+  <p class="kicker">Start</p>
+  <h1>Exam map</h1>
+  
+<table>
+  <thead><tr><th>ACS Area</th><th>Weight</th><th>Tasks</th></tr></thead>
+  <tbody>
+    <tr><td>I Regulations</td><td class="num">15–25%</td><td>General, Operating Rules, Certification, Waivers, Over People, Remote ID</td></tr>
+    <tr><td>II Airspace</td><td class="num">15–25%</td><td>Classification + operating requirements / charts</td></tr>
+    <tr><td>III Weather</td><td class="num">11–16%</td><td>METAR/TAF/ASOS + performance effects</td></tr>
+    <tr><td>IV Loading &amp; Performance</td><td class="num">7–11%</td><td>Weight, CG, performance data</td></tr>
+    <tr><td>V Operations</td><td class="num">35–45%</td><td>Radio, airports, emergencies, ADM, physiology, maintenance</td></tr>
+  </tbody>
+</table>
+<div class="chips"><span class="chip hot">Memorize cold: 400 AGL · 3 SM · 87 kt · 500/2000 clouds · 0.04% · 10 days · $500 · &lt;55 lb · 24 mo recurrent</span></div>
+
+</section><section class="slide" data-title="Hard numbers" data-section="Start">
+  <p class="kicker">Start</p>
+  <h1>Hard numbers</h1>
+  
+<div class="grid three">
+  <div class="card"><strong class="num">&lt; 55 lb</strong><span class="meta">Max sUAS weight incl. payload</span></div>
+  <div class="card"><strong class="num">87 kt</strong><span class="meta">Max groundspeed (100 mph)</span></div>
+  <div class="card"><strong class="num">400 ft AGL</strong><span class="meta">Max altitude (or within 400 ft of structure)</span></div>
+  <div class="card"><strong class="num">3 SM</strong><span class="meta">Min visibility from control station</span></div>
+  <div class="card"><strong class="num">500 / 2,000</strong><span class="meta">ft below / horizontal from clouds</span></div>
+  <div class="card"><strong class="num">0.04%</strong><span class="meta">Max BAC</span></div>
+  <div class="card"><strong class="num">10 days</strong><span class="meta">Accident report to FAA</span></div>
+  <div class="card"><strong class="num">$500</strong><span class="meta">Property damage threshold</span></div>
+  <div class="card"><strong class="num">16 / 24</strong><span class="meta">Min age · recurrent months</span></div>
+</div>
+
+</section><section class="slide" data-title="Area I" data-section="I">
+  <p class="kicker">Area of Operation I</p>
+  <h1>Area I</h1>
+  
+      <p class="lead">Regulations · exam weight 15–25%</p>
+      <div class="grid two">
+        <div class="card"><strong>I.A</strong><span class="meta">General · 8 knowledge elements</span></div><div class="card"><strong>I.B</strong><span class="meta">Operating Rules · 36 knowledge elements</span></div><div class="card"><strong>I.C</strong><span class="meta">Remote Pilot Certification · 4 knowledge elements</span></div><div class="card"><strong>I.D</strong><span class="meta">Waivers · 1 knowledge elements</span></div><div class="card"><strong>I.E</strong><span class="meta">Operations Over People · 21 knowledge elements</span></div><div class="card"><strong>I.F</strong><span class="meta">Remote Identification · 7 knowledge elements</span></div>
+      </div>
+    
+</section><section class="slide" data-title="I.A · 1/2" data-section="I">
+  <p class="kicker">UA.I.A · General</p>
+  <h1>I.A · 1/2</h1>
+  
+              <p class="lead">Task I.A — General</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K1</div>
+                  <strong>Applicability of 14 CFR part 107 to small unmanned aircraft operations.</strong>
+                  <span class="meta">Part 107 covers civil small UAS (&lt;55 lb) in the NAS. Hobby/recreational has different rules (49 USC 44809). Public aircraft ops may use other authorities.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K2</div>
+                  <strong>Definitions used in 14 CFR part 107.</strong>
+                  <span class="meta">Know: small UA, sUAS, remote PIC, person manipulating controls, visual observer, control station, uninvolved person, open-air assembly.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K3</div>
+                  <strong>The ramifications of falsification, reproduction, or alteration of a certificate, rating, authorization, record, or report.</strong>
+                  <span class="meta">Falsifying/reproducing/altering certificates, ratings, authorizations, records, or reports can mean denial, suspension, revocation, and civil/criminal penalties.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K4</div>
+                  <strong>Accident reporting.</strong>
+                  <span class="meta">Report to FAA within 10 calendar days if: serious injury / loss of consciousness, OR property damage (other than the UA) with repair cost or fair market value ≥ $500.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.A · 2/2" data-section="I">
+  <p class="kicker">UA.I.A · General</p>
+  <h1>I.A · 2/2</h1>
+  
+              <p class="lead">Task I.A — General</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K5</div>
+                  <strong>Inspection, testing, and demonstration of compliance.</strong>
+                  <span class="meta">You must allow FAA inspection/testing and demonstrate compliance when requested. Keep required docs available: certificate, ID, registration, waiver if any.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K6</div>
+                  <strong>Multiple category sUAS.</strong>
+                  <span class="meta">An aircraft may be eligible in more than one over-people category if it meets each category’s requirements.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K7</div>
+                  <strong>Record retention.</strong>
+                  <span class="meta">Retain required records (e.g., Category 4 maintenance records) for the periods in the regs — typically at least 3 years where specified for Cat 4.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.A.K8</div>
+                  <strong>Previously manufactured sUAS.</strong>
+                  <span class="meta">Previously manufactured aircraft may have paths into over-people categories via Declaration of Compliance / Means of Compliance rules.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 1/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 1/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K1</div>
+                  <strong>Registration requirements for sUAS.</strong>
+                  <span class="meta">Register at faadronezone.faa.gov. Mark registration number on the aircraft. Foreign civil aircraft have different marking/registration rules.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K2</div>
+                  <strong>Requirement for the sUAS to be in a condition for safe operation.</strong>
+                  <span class="meta">No flight unless aircraft is in a condition for safe operation. Preflight inspection required every flight.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K3</div>
+                  <strong>Medical condition(s) that would interfere with safe operation of an sUAS.</strong>
+                  <span class="meta">No medical certificate required — but you may not fly (or act as VO) if a physical/mental condition makes safe ops unsafe.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K4</div>
+                  <strong>Responsibility and authority of the remote PIC.</strong>
+                  <span class="meta">Remote PIC is directly responsible for and is the final authority on the operation.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 2/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 2/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K4a</div>
+                  <strong>a. Allowing a person other than the remote PIC to manipulate the flight controls</strong>
+                  <span class="meta">Someone else may manipulate controls if the remote PIC can immediately take direct control and remains responsible.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K5</div>
+                  <strong>Regulatory deviation and reporting requirements for in-flight emergencies.</strong>
+                  <span class="meta">In an in-flight emergency, remote PIC may deviate from Part 107 as required. If ATC asks, send a written report.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K6</div>
+                  <strong>Hazardous operations.</strong>
+                  <span class="meta">No careless or reckless operation. No operation that endangers life or property.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K6a</div>
+                  <strong>a. Careless or reckless</strong>
+                  <span class="meta">Careless/reckless = endangering the life or property of another.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 3/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 3/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K6b</div>
+                  <strong>b. Dropping an object</strong>
+                  <span class="meta">May drop objects only if it does not create a hazard to persons or property.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K7</div>
+                  <strong>Operating from a moving aircraft or moving land- or water-borne vehicle.</strong>
+                  <span class="meta">From a moving land/water vehicle: only over sparsely populated areas. Never from a moving aircraft. No property carriage for hire from a moving vehicle.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K8</div>
+                  <strong>Alcohol or drugs and the provisions on prohibition of use.</strong>
+                  <span class="meta">No alcohol while on duty or within 8 hours of duty; BAC &lt; 0.04%. No drugs that affect safety. Refusal of testing has certificate consequences.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K9</div>
+                  <strong>Daylight operations.</strong>
+                  <span class="meta">Daylight ops allowed. Civil twilight and night allowed with anti-collision lighting visible ≥ 3 SM (intensity may be reduced for safety).</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 4/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 4/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K10</div>
+                  <strong>Visual line of sight (VLOS) aircraft operations.</strong>
+                  <span class="meta">VLOS with unaided vision (corrective lenses OK). Brief interruptions OK (e.g., glance at controller) if VLOS regained promptly. FPV alone ≠ VLOS.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K11</div>
+                  <strong>Requirements when a visual observer is used.</strong>
+                  <span class="meta">If using a VO: VO must maintain constant visual contact and communicate effectively with remote PIC. Remote PIC still responsible.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K12</div>
+                  <strong>Prohibition of operating multiple sUAS.</strong>
+                  <span class="meta">One remote PIC → one sUAS at a time (unless waived).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K13</div>
+                  <strong>Prohibition of carrying hazardous material.</strong>
+                  <span class="meta">No carrying hazardous material as defined in 49 CFR.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 5/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 5/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K14</div>
+                  <strong>Staying safely away from other aircraft and right-of-way rules.</strong>
+                  <span class="meta">Always yield right-of-way to all aircraft, airborne vehicles, and launch/reentry vehicles. Don’t create a collision hazard.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K14a</div>
+                  <strong>a. See and avoid other aircraft and other potential hazard considerations of the remote PIC</strong>
+                  <span class="meta">See-and-avoid is continuous. Know your UA’s position, attitude, altitude, and direction of flight at all times.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K15</div>
+                  <strong>Operations over human beings (Refer to Area of Operation I, Task E).</strong>
+                  <span class="meta">Ops over people only under Categories 1–4 eligibility (see Task E) or with a waiver.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K16</div>
+                  <strong>Prior authorization required for operation in certain airspace.</strong>
+                  <span class="meta">ATC authorization required before Class B, C, D, or surface Class E designated for an airport. Class G: no ATC auth needed.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 6/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 6/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K17</div>
+                  <strong>Operating in the vicinity of airports.</strong>
+                  <span class="meta">Near airports: don’t interfere with airport ops, traffic patterns, or manned traffic. Monitor CTAF/tower when useful for SA.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K18</div>
+                  <strong>Operating in prohibited or restricted areas.</strong>
+                  <span class="meta">No ops in prohibited or restricted areas unless permission from using/controlling agency.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K19</div>
+                  <strong>Flight restrictions in the proximity of certain areas designated by notice to airmen (NOTAM).</strong>
+                  <span class="meta">Comply with TFRs and other NOTAM flight restrictions. Check before flight (e.g., tfr.faa.gov, NOTAMs).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K20</div>
+                  <strong>Preflight familiarization, inspection, and actions for aircraft operations.</strong>
+                  <span class="meta">Assess operating environment, local weather, airspace, persons/property, other aircraft; inspect aircraft; ensure docs available.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 7/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 7/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K21</div>
+                  <strong>Operating limitations for sUAS.</strong>
+                  <span class="meta">Hard limits: ≤ 87 kt groundspeed; ≤ 400 ft AGL (or within 400 ft of a structure); ≥ 3 SM visibility from CS; clouds: ≥ 500 ft below and ≥ 2,000 ft horizontal.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K21a</div>
+                  <strong>a. Maximum groundspeed</strong>
+                  <span class="meta">Max groundspeed 87 knots (100 mph).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K21b</div>
+                  <strong>b. Altitude limitations</strong>
+                  <span class="meta">Max 400 ft AGL unless within 400 ft of a structure’s uppermost limit.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K21c</div>
+                  <strong>c. Minimum visibility</strong>
+                  <span class="meta">Minimum visibility 3 statute miles from the control station.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 8/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 8/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K21d</div>
+                  <strong>d. Cloud clearance requirements</strong>
+                  <span class="meta">Stay ≥ 500 ft below clouds and ≥ 2,000 ft horizontally. No flying above clouds that block VLOS to the UA.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K22</div>
+                  <strong>Requirements for a Remote Pilot Certificate with an sUAS rating.</strong>
+                  <span class="meta">Remote Pilot Certificate with sUAS rating required to act as remote PIC (with listed exceptions for training under supervision).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K23</div>
+                  <strong>Automated operations. 3</strong>
+                  <span class="meta">Autonomous flight OK if remote PIC can intervene — still must meet VLOS, yield, and other Part 107 rules.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K24</div>
+                  <strong>Civil twilight operations.</strong>
+                  <span class="meta">Civil twilight: anti-collision lighting ≥ 3 SM required.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.B · 9/9" data-section="I">
+  <p class="kicker">UA.I.B · Operating Rules</p>
+  <h1>I.B · 9/9</h1>
+  
+              <p class="lead">Task I.B — Operating Rules</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K25</div>
+                  <strong>Night operations.</strong>
+                  <span class="meta">Night: anti-collision lighting ≥ 3 SM; knowledge test/recurrent must cover night topics for privileges.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K26</div>
+                  <strong>Transportation of property.</strong>
+                  <span class="meta">May transport property for compensation if within Part 107 limits; not from a moving vehicle; total UA weight still &lt; 55 lb.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K27</div>
+                  <strong>ATC transponder equipment prohibition.</strong>
+                  <span class="meta">sUAS under Part 107 generally may not use ATC transponders unless authorized/required in specific cases — Part 107 prohibits operating with a Mode C/S style ATC transponder unless ATC authorizes.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.B.K28</div>
+                  <strong>ADS-B Out prohibition.</strong>
+                  <span class="meta">ADS-B Out equipment generally prohibited for Part 107 sUAS unless authorized. Don’t confuse with Remote ID broadcast.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.C" data-section="I">
+  <p class="kicker">UA.I.C · Remote Pilot Certification</p>
+  <h1>I.C</h1>
+  
+              <p class="lead">Task I.C — Remote Pilot Certification</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.C.K1</div>
+                  <strong>Offenses involving alcohol or drugs.</strong>
+                  <span class="meta">Alcohol/drug offenses can affect certificate eligibility and lead to denial/suspension/revocation.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.C.K2</div>
+                  <strong>The consequences of refusing to submit to a drug or alcohol test or to furnish test results.</strong>
+                  <span class="meta">Refusing a drug/alcohol test or refusing to furnish results can have the same certificate consequences as a failure.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.C.K3</div>
+                  <strong>The eligibility requirements for a Remote Pilot Certificate with an sUAS rating.</strong>
+                  <span class="meta">Eligibility: ≥ 16 years old; read/speak/write/understand English; pass knowledge test (or qualifying Part 61 path); TSA security vetting.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.C.K4</div>
+                  <strong>Aeronautical knowledge recency.</strong>
+                  <span class="meta">Recurrent training/knowledge every 24 calendar-months to keep privileges current.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.D" data-section="I">
+  <p class="kicker">UA.I.D · Waivers</p>
+  <h1>I.D</h1>
+  
+              <p class="lead">Task I.D — Waivers</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.D.K1</div>
+                  <strong>Waiver policy and requirements.</strong>
+                  <span class="meta">Many Part 107 limits can be waived if you show equivalent safety. Apply via FAA DroneZone. Not everything is waiverable; mitigation plan required.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.E · 1/6" data-section="I">
+  <p class="kicker">UA.I.E · Operations Over People</p>
+  <h1>I.E · 1/6</h1>
+  
+              <p class="lead">Task I.E — Operations Over People</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K1</div>
+                  <strong>Remote pilot responsibilities when operating over people.</strong>
+                  <span class="meta">Remote PIC must ensure the operation meets the category eligibility throughout the flight and follows operating instructions.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K2</div>
+                  <strong>Operations over people at night.</strong>
+                  <span class="meta">Ops over people at night still need category eligibility PLUS night lighting requirements.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K3</div>
+                  <strong>Category of operations, including:</strong>
+                  <span class="meta">Four categories with different weight/injury-risk / airworthiness paths.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K3a</div>
+                  <strong>a. Category 1</strong>
+                  <span class="meta">Cat 1: ≤ 0.55 lb (including everything aboard); no exposed rotating parts that could lacerate; eligible for sustained flight over open-air assemblies if Remote ID met.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.E · 2/6" data-section="I">
+  <p class="kicker">UA.I.E · Operations Over People</p>
+  <h1>I.E · 2/6</h1>
+  
+              <p class="lead">Task I.E — Operations Over People</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K3b</div>
+                  <strong>b. Category 2</strong>
+                  <span class="meta">Cat 2: MoC + DoC; injury severity limits; eligible for sustained flight over open-air assemblies (with Remote ID).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K3c</div>
+                  <strong>c. Category 3</strong>
+                  <span class="meta">Cat 3: MoC + DoC; higher injury thresholds than Cat 2; NOT allowed for sustained flight over open-air assemblies; often closed/restricted sites or limited exposure.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K3d</div>
+                  <strong>d. Category 4</strong>
+                  <span class="meta">Cat 4: type-certificated aircraft operated per Part 107 with applicable operating limitations; may operate over open-air assemblies if limitations allow.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K4</div>
+                  <strong>Selecting an operational area.</strong>
+                  <span class="meta">Choose sites that keep uninvolved people clear unless category allows ops over them.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.E · 3/6" data-section="I">
+  <p class="kicker">UA.I.E · Operations Over People</p>
+  <h1>I.E · 3/6</h1>
+  
+              <p class="lead">Task I.E — Operations Over People</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K5</div>
+                  <strong>Minimum distances from a person.</strong>
+                  <span class="meta">Minimum distances / exposure limits depend on category and whether people are participating / inside structures / closed sites.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K6</div>
+                  <strong>Operations over moving vehicles.</strong>
+                  <span class="meta">Ops over moving vehicles generally restricted unless everyone is within a closed/restricted-access site or other category conditions met.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K7</div>
+                  <strong>Modifications to an sUAS.</strong>
+                  <span class="meta">Modifications can void category eligibility — follow manufacturer operating instructions and MoC/DoC constraints.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K8</div>
+                  <strong>Closed and restricted access sites.</strong>
+                  <span class="meta">Closed- or restricted-access sites can enable Cat 3 ops where people are notified and able to expect UA overhead.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.E · 4/6" data-section="I">
+  <p class="kicker">UA.I.E · Operations Over People</p>
+  <h1>I.E · 4/6</h1>
+  
+              <p class="lead">Task I.E — Operations Over People</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K9</div>
+                  <strong>Remote Pilot operating instructions.</strong>
+                  <span class="meta">Follow remote pilot operating instructions for that make/model when required for category eligibility.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K10</div>
+                  <strong>Required components and Category declaration.</strong>
+                  <span class="meta">Required components listed in DoC / operating instructions must be installed and functioning.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K11</div>
+                  <strong>Optional components.</strong>
+                  <span class="meta">Optional components only if allowed by operating instructions without changing category performance.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K12</div>
+                  <strong>Applicant produced, designed, or modified sUAS for operations over people.</strong>
+                  <span class="meta">Applicant-designed/modified aircraft need proper MoC/DoC path before Cat 2/3 ops.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.E · 5/6" data-section="I">
+  <p class="kicker">UA.I.E · Operations Over People</p>
+  <h1>I.E · 5/6</h1>
+  
+              <p class="lead">Task I.E — Operations Over People</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K13</div>
+                  <strong>Declaration of Compliance (DoC).</strong>
+                  <span class="meta">Declaration of Compliance (DoC) submitted to FAA for Cat 2/3 eligibility.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K14</div>
+                  <strong>Maintenance of an sUAS that is eligible for operations over people.</strong>
+                  <span class="meta">Maintain aircraft so it continues to meet the category standards; document as required.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K15</div>
+                  <strong>Means of Compliance (MoC).</strong>
+                  <span class="meta">Means of Compliance (MoC) = FAA-accepted method showing injury/kinetic energy / safety standards are met.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K16</div>
+                  <strong>Impact kinetic energy.</strong>
+                  <span class="meta">Impact kinetic energy limits are central to Cat 2/3 injury-severity standards.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.E · 6/6" data-section="I">
+  <p class="kicker">UA.I.E · Operations Over People</p>
+  <h1>I.E · 6/6</h1>
+  
+              <p class="lead">Task I.E — Operations Over People</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.E.K17</div>
+                  <strong>Exposed rotating parts.</strong>
+                  <span class="meta">Exposed rotating parts that can lacerate skin generally disqualify Cat 1 (and matter for other categories’ designs).</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.F · 1/2" data-section="I">
+  <p class="kicker">UA.I.F · Remote Identification</p>
+  <h1>I.F · 1/2</h1>
+  
+              <p class="lead">Task I.F — Remote Identification</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.F.K1</div>
+                  <strong>Standard remote identification.</strong>
+                  <span class="meta">Standard Remote ID: aircraft broadcasts required message elements from takeoff to shutdown.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.F.K2</div>
+                  <strong>Alternative remote identification.</strong>
+                  <span class="meta">Alternative: Remote ID broadcast module attached to the aircraft OR operate within an FAA-Recognized Identification Area (FRIA).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.F.K3</div>
+                  <strong>Operations for aeronautical research.</strong>
+                  <span class="meta">Limited research exceptions may exist — don’t assume you’re covered unless the operation qualifies.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.F.K4</div>
+                  <strong>ADS-B Out.</strong>
+                  <span class="meta">ADS-B Out ≠ Remote ID. Part 107 generally prohibits ADS-B Out unless authorized.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="I.F · 2/2" data-section="I">
+  <p class="kicker">UA.I.F · Remote Identification</p>
+  <h1>I.F · 2/2</h1>
+  
+              <p class="lead">Task I.F — Remote Identification</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.I.F.K5</div>
+                  <strong>Confirmation of identification.</strong>
+                  <span class="meta">Before flight, confirm Remote ID is working (standard UA or module) unless in a FRIA under that rule path.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.F.K6</div>
+                  <strong>Minimum message elements broadcast for remote identification.</strong>
+                  <span class="meta">Broadcast elements typically include UA ID, location/altitude, velocity, control station location, timestamp, emergency status — per Part 89.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.I.F.K7</div>
+                  <strong>Product labeling.</strong>
+                  <span class="meta">Product labeling indicates Standard Remote ID UA or broadcast module compliance.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="Area II" data-section="II">
+  <p class="kicker">Area of Operation II</p>
+  <h1>Area II</h1>
+  
+      <p class="lead">Airspace · exam weight 15–25%</p>
+      <div class="grid two">
+        <div class="card"><strong>II.A</strong><span class="meta">Airspace Classification · 9 knowledge elements</span></div><div class="card"><strong>II.B</strong><span class="meta">Airspace Operational Requirements · 17 knowledge elements</span></div>
+      </div>
+    
+</section><section class="slide" data-title="II.A · 1/3" data-section="II">
+  <p class="kicker">UA.II.A · Airspace Classification</p>
+  <h1>II.A · 1/3</h1>
+  
+              <p class="lead">Task II.A — Airspace Classification</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K1</div>
+                  <strong>General airspace:</strong>
+                  <span class="meta">Controlled vs uncontrolled; regulatory vs nonregulatory. For Part 107 focus on B, C, D, E, G.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K1a</div>
+                  <strong>a. Class B controlled airspace</strong>
+                  <span class="meta">Class B: busiest airports; surface to ~10,000 MSL; layered cake; ATC auth required for sUAS.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K1b</div>
+                  <strong>b. Class C controlled airspace</strong>
+                  <span class="meta">Class C: surface ~5 NM + outer shelf ~10 NM to ~4,000 AGL (charted MSL); ATC auth required.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K1c</div>
+                  <strong>c. Class D controlled airspace</strong>
+                  <span class="meta">Class D: towered airports to ~2,500 AGL (charted MSL); dashed blue; ATC auth required.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="II.A · 2/3" data-section="II">
+  <p class="kicker">UA.II.A · Airspace Classification</p>
+  <h1>II.A · 2/3</h1>
+  
+              <p class="lead">Task II.A — Airspace Classification</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K1d</div>
+                  <strong>d. Class E controlled airspace</strong>
+                  <span class="meta">Class E: controlled leftover. Bases often 700 AGL (magenta vignette) or 1,200 AGL (blue vignette); sometimes surface (dashed magenta). Surface E for airport needs auth.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K1e</div>
+                  <strong>e. Class G uncontrolled airspace</strong>
+                  <span class="meta">Class G: uncontrolled from surface up to overlying E. No ATC auth for Part 107 (still obey altitude/VLOS/weather mins).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K2</div>
+                  <strong>Special-use airspace, such as prohibited, restricted, warning areas, military operation areas, alert areas, and controlled firing areas.</strong>
+                  <span class="meta">P = prohibited (stay out). R = restricted (permission/avoid when hot). W = warning. MOA = military ops (VFR OK, caution when active). A = alert. CFA = not charted; activities stop for nonparticipants.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K3</div>
+                  <strong>Other airspace areas, such as Airport Advisory Services, Military Training Routes (MTRs), Temporary Flight Restrictions (TFRs), Parachute Jump Operations, Terminal Radar Service Areas (TRSAs), National Security Areas (NSA) and Visual Flight Rules (VFR) routes.</strong>
+                  <span class="meta">Also know: MTRs (IR/VR), TFRs, parachute ops, published VFR routes, TRSA, NSA, LAA.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="II.A · 3/3" data-section="II">
+  <p class="kicker">UA.II.A · Airspace Classification</p>
+  <h1>II.A · 3/3</h1>
+  
+              <p class="lead">Task II.A — Airspace Classification</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.A.K4</div>
+                  <strong>Air Traffic Control (ATC) and the NAS.</strong>
+                  <span class="meta">ATC separates IFR and provides services by airspace class. sUAS enters controlled airspace only with authorization (LAANC/DroneZone/ATC).</span>
+                </div></div>
+            
+</section><section class="slide" data-title="II.B · 1/5" data-section="II">
+  <p class="kicker">UA.II.B · Airspace Operational Requirements</p>
+  <h1>II.B · 1/5</h1>
+  
+              <p class="lead">Task II.B — Airspace Operational Requirements</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K1</div>
+                  <strong>Basic weather minimums.</strong>
+                  <span class="meta">Part 107 weather mins: 3 SM vis; 500 ft below / 2,000 ft horizontal from clouds — in addition to airspace rules.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K2</div>
+                  <strong>ATC authorizations and related operating limitations.</strong>
+                  <span class="meta">Auth may include altitude caps, time windows, geo limits. Comply exactly. LAANC near-real-time below facility grids; further coordination for higher.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K3</div>
+                  <strong>Operations near airports.</strong>
+                  <span class="meta">Airports: patterns, heliports, seaplane bases, noise abatement. Don’t force manned aircraft to maneuver.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4</div>
+                  <strong>Potential flight hazards.</strong>
+                  <span class="meta">Hazard awareness beyond airspace class — balloons, lasers, wires, thermal plumes, P-static, etc.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="II.B · 2/5" data-section="II">
+  <p class="kicker">UA.II.B · Airspace Operational Requirements</p>
+  <h1>II.B · 2/5</h1>
+  
+              <p class="lead">Task II.B — Airspace Operational Requirements</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4a</div>
+                  <strong>a. Common aircraft accident causal factors</strong>
+                  <span class="meta">Human factors and midair/collision-with-terrain thinking still apply to sUAS decision-making.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4b</div>
+                  <strong>b. Avoid flight beneath unmanned balloons</strong>
+                  <span class="meta">Avoid flight beneath unmanned balloons / moored balloon cables.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4c</div>
+                  <strong>c. Emergency airborne inspection of other aircraft</strong>
+                  <span class="meta">Don’t join “inspect other aircraft” style profiles — stay clear; yield.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4d</div>
+                  <strong>d. Precipitation static</strong>
+                  <span class="meta">Precipitation static can affect radio/avionics on manned aircraft — situational awareness item near weather.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="II.B · 3/5" data-section="II">
+  <p class="kicker">UA.II.B · Airspace Operational Requirements</p>
+  <h1>II.B · 3/5</h1>
+  
+              <p class="lead">Task II.B — Airspace Operational Requirements</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4e</div>
+                  <strong>e. Light amplification by stimulated emission of radiation (laser) operations and reporting illumination of aircraft</strong>
+                  <span class="meta">Laser illumination of aircraft is hazardous and reportable; don’t create laser hazards.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4f</div>
+                  <strong>f. Avoiding flight in the vicinity of thermal plumes such as smoke stacks and cooling towers</strong>
+                  <span class="meta">Smoke stacks / cooling towers = turbulence and reduced performance; avoid plumes.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K4g</div>
+                  <strong>g. Flying in the wire environment</strong>
+                  <span class="meta">Wires are hard to see — survey the area; assume wires near poles/roads/rail.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K5</div>
+                  <strong>The NOTAM system, including how to obtain an established NOTAM through Flight Service.</strong>
+                  <span class="meta">NOTAMs via Flight Service / FAA sites / apps. TFRs are FDC NOTAMs. Always check.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="II.B · 4/5" data-section="II">
+  <p class="kicker">UA.II.B · Airspace Operational Requirements</p>
+  <h1>II.B · 4/5</h1>
+  
+              <p class="lead">Task II.B — Airspace Operational Requirements</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K6</div>
+                  <strong>Operator equipment for night flight.</strong>
+                  <span class="meta">Night: anti-collision lighting on UA; consider crew lighting/scanning techniques without destroying night vision.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K7</div>
+                  <strong>Ground structures and ground structure lighting.</strong>
+                  <span class="meta">Obstacles may be lit (red/white/strobes). Charted towers/obstructions matter for mission planning.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K8</div>
+                  <strong>Hazards on the ground that do not have lighting.</strong>
+                  <span class="meta">Unlit obstacles (wires, cranes, trees) — daylight survey still matters; night ops raise risk.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K9</div>
+                  <strong>Manned aircraft lighting.</strong>
+                  <span class="meta">Manned lighting: position (red left / green right / white rear), anti-collision, landing lights.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="II.B · 5/5" data-section="II">
+  <p class="kicker">UA.II.B · Airspace Operational Requirements</p>
+  <h1>II.B · 5/5</h1>
+  
+              <p class="lead">Task II.B — Airspace Operational Requirements</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.II.B.K10</div>
+                  <strong>sUAS lighting requirements.</strong>
+                  <span class="meta">sUAS night/twilight: anti-collision visible ≥ 3 SM; may reduce intensity if needed to maintain visual contact / avoid glare hazard.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="Area III" data-section="III">
+  <p class="kicker">Area of Operation III</p>
+  <h1>Area III</h1>
+  
+      <p class="lead">Weather · exam weight 11–16%</p>
+      <div class="grid two">
+        <div class="card"><strong>III.A</strong><span class="meta">Sources of Weather · 5 knowledge elements</span></div><div class="card"><strong>III.B</strong><span class="meta">Effects on Performance · 12 knowledge elements</span></div>
+      </div>
+    
+</section><section class="slide" data-title="III.A · 1/2" data-section="III">
+  <p class="kicker">UA.III.A · Sources of Weather</p>
+  <h1>III.A · 1/2</h1>
+  
+              <p class="lead">Task III.A — Sources of Weather</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.III.A.K1</div>
+                  <strong>Internet weather briefing and sources of weather available for flight planning purposes.</strong>
+                  <span class="meta">aviationweather.gov, 1800wxbrief, AWOS/ASOS phone/radio, apps feeding official METARs/TAFs. Brief before flight.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.A.K2</div>
+                  <strong>Aviation routine weather reports (METAR).</strong>
+                  <span class="meta">METAR = routine hourly observation (SPECI = special). Decode wind, vis (SM), weather, sky (AGL hundreds), temp/dew (°C), altimeter.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.A.K3</div>
+                  <strong>Terminal aerodrome forecasts (TAF).</strong>
+                  <span class="meta">TAF = aerodrome forecast, usually 24–30 hours. FM/TEMPO/PROB/BECMG groups. Use for mission timing.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.A.K4</div>
+                  <strong>Weather charts.</strong>
+                  <span class="meta">Surface analysis, prog charts, weather depiction, radar/satellite — big picture for fronts and systems.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="III.A · 2/2" data-section="III">
+  <p class="kicker">UA.III.A · Sources of Weather</p>
+  <h1>III.A · 2/2</h1>
+  
+              <p class="lead">Task III.A — Sources of Weather</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.III.A.K5</div>
+                  <strong>Automated surface observing systems (ASOS) and automated weather observing systems (AWOS).</strong>
+                  <span class="meta">ASOS/AWOS provide automated local observations — great for airport vicinity decisions.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="III.B · 1/3" data-section="III">
+  <p class="kicker">UA.III.B · Effects on Performance</p>
+  <h1>III.B · 1/3</h1>
+  
+              <p class="lead">Task III.B — Effects on Performance</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1</div>
+                  <strong>Weather factors and their effects on performance.</strong>
+                  <span class="meta">Weather changes performance, VLOS, and battery endurance. Go/no-go using forecasts + local observations.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1a</div>
+                  <strong>a. Density altitude</strong>
+                  <span class="meta">High density altitude (hot/high/humid) = thin air = worse climb/endurance/payload capability.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1b</div>
+                  <strong>b. Wind and currents</strong>
+                  <span class="meta">Wind/gusts/turbulence/microbursts. Gusts above aircraft rating = no-go even if sustained wind OK.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1c</div>
+                  <strong>c. Atmospheric stability, pressure, and temperature</strong>
+                  <span class="meta">Stable vs unstable: stable = smooth, poor vis; unstable = turbulence, showery precip. Pressure/temp drive density.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="III.B · 2/3" data-section="III">
+  <p class="kicker">UA.III.B · Effects on Performance</p>
+  <h1>III.B · 2/3</h1>
+  
+              <p class="lead">Task III.B — Effects on Performance</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1d</div>
+                  <strong>d. Air masses and fronts</strong>
+                  <span class="meta">Fronts bring wind shifts, precip, clouds. Cold fronts often more convective; warm fronts more stratiform/IFR.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1e</div>
+                  <strong>e. Thunderstorms and microbursts</strong>
+                  <span class="meta">Thunderstorms: avoid. Microbursts = violent downdrafts/outflow near the surface.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1f</div>
+                  <strong>f. Tornadoes</strong>
+                  <span class="meta">Tornadoes: extreme winds — do not operate.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1g</div>
+                  <strong>g. Icing</strong>
+                  <span class="meta">Icing degrades lift/prop efficiency; visible moisture + freezing temps = icing risk.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="III.B · 3/3" data-section="III">
+  <p class="kicker">UA.III.B · Effects on Performance</p>
+  <h1>III.B · 3/3</h1>
+  
+              <p class="lead">Task III.B — Effects on Performance</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1h</div>
+                  <strong>h. Hail</strong>
+                  <span class="meta">Hail damages airframes/props — associated with thunderstorms.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1i</div>
+                  <strong>i. Fog</strong>
+                  <span class="meta">Fog when temp/dew point close; radiation fog on clear calm nights; advection fog with moist air over cool surfaces.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1j</div>
+                  <strong>j. Ceiling and visibility</strong>
+                  <span class="meta">Ceiling = AGL height of lowest broken/overcast. Part 107 also needs cloud clearances + 3 SM vis.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.III.B.K1k</div>
+                  <strong>k. Lightning</strong>
+                  <span class="meta">Lightning hazard to people/equipment even miles from the cell — land and seek shelter.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="Area IV" data-section="IV">
+  <p class="kicker">Area of Operation IV</p>
+  <h1>Area IV</h1>
+  
+      <p class="lead">Loading &amp; Performance · exam weight 7–11%</p>
+      <div class="grid two">
+        <div class="card"><strong>IV.A</strong><span class="meta">Loading and Performance · 4 knowledge elements</span></div>
+      </div>
+    
+</section><section class="slide" data-title="IV.A" data-section="IV">
+  <p class="kicker">UA.IV.A · Loading and Performance</p>
+  <h1>IV.A</h1>
+  
+              <p class="lead">Task IV.A — Loading and Performance</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.IV.A.K1</div>
+                  <strong>General loading and performance, including:</strong>
+                  <span class="meta">Weight and balance affect stability, control authority, endurance, and wind tolerance. Stay within manufacturer limits.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.IV.A.K1a</div>
+                  <strong>a. Effects of loading changes</strong>
+                  <span class="meta">Adding weight increases required power/AOA, reduces climb and endurance, raises stall speed for winged UA.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.IV.A.K1b</div>
+                  <strong>b. Balance, stability, and center of gravity</strong>
+                  <span class="meta">CG too aft = less stable; CG too forward = nose-heavy / harder to flare or pitch up. Lateral balance also matters for multirotors.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.IV.A.K2</div>
+                  <strong>Importance and use of performance data to calculate the effect on the aircraft’s performance of an sUAS.</strong>
+                  <span class="meta">Use performance data / charts (e.g., load factor vs bank). Higher bank → higher load factor → higher stall speed.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="Area V" data-section="V">
+  <p class="kicker">Area of Operation V</p>
+  <h1>Area V</h1>
+  
+      <p class="lead">Operations · exam weight 35–45%</p>
+      <div class="grid two">
+        <div class="card"><strong>V.A</strong><span class="meta">Radio Communications · 8 knowledge elements</span></div><div class="card"><strong>V.B</strong><span class="meta">Airport Operations · 10 knowledge elements</span></div><div class="card"><strong>V.C</strong><span class="meta">Emergency Procedures · 11 knowledge elements</span></div><div class="card"><strong>V.D</strong><span class="meta">Aeronautical Decision-Making · 7 knowledge elements</span></div><div class="card"><strong>V.E</strong><span class="meta">Physiology · 9 knowledge elements</span></div><div class="card"><strong>V.F</strong><span class="meta">Maintenance &amp; Inspection · 7 knowledge elements</span></div>
+      </div>
+    
+</section><section class="slide" data-title="V.A · 1/2" data-section="V">
+  <p class="kicker">UA.V.A · Radio Communications</p>
+  <h1>V.A · 1/2</h1>
+  
+              <p class="lead">Task V.A — Radio Communications</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K1</div>
+                  <strong>Airport operations with and without an operating control tower.</strong>
+                  <span class="meta">Towered: ATC controls runway/taxi. Nontowered: pilots self-announce on CTAF. Know which you’re near.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K2</div>
+                  <strong>The description and use of a Common Traffic Advisory Frequency (CTAF) to monitor manned aircraft communications.</strong>
+                  <span class="meta">CTAF = frequency for advisory traffic calls at nontowered airports. Monitor to hear positions/intentions.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K3</div>
+                  <strong>Recommended traffic advisory procedures used by manned aircraft pilots such as self-announcing of position and intentions.</strong>
+                  <span class="meta">Typical calls: departing, downwind, base, final, clear of runway. Helps you predict manned traffic paths.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K4</div>
+                  <strong>Aeronautical advisory communication station (UNICOM) and associated communication procedures used by manned aircraft pilots.</strong>
+                  <span class="meta">UNICOM: airport advisory / services. Often same frequency as CTAF at small fields.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.A · 2/2" data-section="V">
+  <p class="kicker">UA.V.A · Radio Communications</p>
+  <h1>V.A · 2/2</h1>
+  
+              <p class="lead">Task V.A — Radio Communications</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K5</div>
+                  <strong>Automatic Terminal Information Service (ATIS).</strong>
+                  <span class="meta">ATIS: recorded weather + airport info on a published frequency; updates hourly or as needed.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K6</div>
+                  <strong>Aircraft call signs and registration numbers.</strong>
+                  <span class="meta">Aircraft called by type + N-number (registration). Helps you track who is where in the pattern.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K7</div>
+                  <strong>The phonetic alphabet.</strong>
+                  <span class="meta">Phonetic alphabet: Alpha, Bravo, Charlie… used in callsigns and clearances.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.A.K8</div>
+                  <strong>Phraseology: altitudes, directions, speed, and time.</strong>
+                  <span class="meta">Phraseology for altitudes (“four thousand”), headings, speeds, time (UTC/Zulu).</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.B · 1/3" data-section="V">
+  <p class="kicker">UA.V.B · Airport Operations</p>
+  <h1>V.B · 1/3</h1>
+  
+              <p class="lead">Task V.B — Airport Operations</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K1</div>
+                  <strong>Types of airports such as towered, uncontrolled towered, heliport, and seaplane bases.</strong>
+                  <span class="meta">Towered, nontowered, heliport, seaplane base — each has different traffic behavior.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K2</div>
+                  <strong>ATC towers, such as ensuring the remote pilot can monitor and interpret ATC communications to improve situational awareness.</strong>
+                  <span class="meta">Listening to tower/CTAF improves SA even when you are not talking.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K3</div>
+                  <strong>Runway markings and signage.</strong>
+                  <span class="meta">Runway numbers = magnetic heading÷10. Centerlines, hold-short, displaced thresholds, taxiway markings.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K4</div>
+                  <strong>Traffic patterns used by manned aircraft pilots.</strong>
+                  <span class="meta">Standard left traffic unless right traffic indicated. Legs: upwind, crosswind, downwind, base, final.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.B · 2/3" data-section="V">
+  <p class="kicker">UA.V.B · Airport Operations</p>
+  <h1>V.B · 2/3</h1>
+  
+              <p class="lead">Task V.B — Airport Operations</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K5</div>
+                  <strong>Security Identification Display Areas (SIDA).</strong>
+                  <span class="meta">SIDA = Security Identification Display Area at commercial airports — badged access; don’t enter unauthorized.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K6</div>
+                  <strong>Sources for airport data.</strong>
+                  <span class="meta">Chart Supplement (formerly A/FD), sectionals, TAC, drone apps with FAA data.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K6a</div>
+                  <strong>a. Aeronautical charts</strong>
+                  <span class="meta">Sectionals: airspace, airports, obstacles, frequencies, special use. Altitudes on charts are MSL.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K6b</div>
+                  <strong>b. Chart Supplements</strong>
+                  <span class="meta">Chart Supplement: hours, frequencies, traffic pattern altitude/direction, remarks.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.B · 3/3" data-section="V">
+  <p class="kicker">UA.V.B · Airport Operations</p>
+  <h1>V.B · 3/3</h1>
+  
+              <p class="lead">Task V.B — Airport Operations</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K7</div>
+                  <strong>Avoiding bird and wildlife hazards and reporting collisions between aircraft and wildlife.</strong>
+                  <span class="meta">Bird/wildlife strikes — avoid flocks; report strikes when required/appropriate.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.B.K8</div>
+                  <strong>Airport and seaplane base lighting.</strong>
+                  <span class="meta">Beacon, runway edge (white), taxiway (blue), threshold lights, PAPI/VASI — helps locate airport at night.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.C · 1/3" data-section="V">
+  <p class="kicker">UA.V.C · Emergency Procedures</p>
+  <h1>V.C · 1/3</h1>
+  
+              <p class="lead">Task V.C — Emergency Procedures</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K1</div>
+                  <strong>Emergency planning and communication.</strong>
+                  <span class="meta">Brief contingencies before launch: lost link, lost VLOS, low battery, flyaway, people entering area. Communicate roles.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K2</div>
+                  <strong>Characteristics and potential hazards of lithium batteries.</strong>
+                  <span class="meta">Li-ion: thermal runaway risk. Inspect for damage/swelling; store/charge safely.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K2a</div>
+                  <strong>a. Safe transportation such as proper inspection and handling</strong>
+                  <span class="meta">Transport in approved state of charge/containers; protect terminals; follow carrier rules.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K2b</div>
+                  <strong>b. Safe charging</strong>
+                  <span class="meta">Charge on fire-resistant surface; don’t leave unattended; use correct charger; don’t charge damaged packs.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.C · 2/3" data-section="V">
+  <p class="kicker">UA.V.C · Emergency Procedures</p>
+  <h1>V.C · 2/3</h1>
+  
+              <p class="lead">Task V.C — Emergency Procedures</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K2c</div>
+                  <strong>c. Safe usage</strong>
+                  <span class="meta">Stay within manufacturer C-rates/temps; balance charge when required.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K2d</div>
+                  <strong>d. Risks of fires involving lithium batteries</strong>
+                  <span class="meta">Li battery fires need special extinguishing approach; water may help cool some packs but know your battery guidance / emergency plan.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K3</div>
+                  <strong>Loss of aircraft control link and fly-aways.</strong>
+                  <span class="meta">Lost link: execute predetermined behavior (RTH/land/loiter). Flyaway: prioritize people; notify ATC if entering controlled airspace.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K4</div>
+                  <strong>Loss of Global Positioning System (GPS) signal during flight and potential consequences.</strong>
+                  <span class="meta">GPS loss: position hold may fail; switch to attitude/manual as trained; maintain VLOS; land if unstable.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.C · 3/3" data-section="V">
+  <p class="kicker">UA.V.C · Emergency Procedures</p>
+  <h1>V.C · 3/3</h1>
+  
+              <p class="lead">Task V.C — Emergency Procedures</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K5</div>
+                  <strong>Frequency spectrums and associated limitations.</strong>
+                  <span class="meta">2.4/5.8 GHz congestion, interference, and FCC power limits. Frequency conflicts near crowds/stadiums.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K6</div>
+                  <strong>Procedures for operations over people.</strong>
+                  <span class="meta">If category eligibility breaks midflight (people enter unexpectedly), maneuver to a compliant condition or land.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.C.K7</div>
+                  <strong>Procedures for operations at night.</strong>
+                  <span class="meta">Night emergencies harder — maintain lighting, VLOS technique, and abort thresholds.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.D · 1/2" data-section="V">
+  <p class="kicker">UA.V.D · Aeronautical Decision-Making</p>
+  <h1>V.D · 1/2</h1>
+  
+              <p class="lead">Task V.D — Aeronautical Decision-Making</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.D.K1</div>
+                  <strong>Aeronautical decision-making (ADM).</strong>
+                  <span class="meta">ADM = systematic approach to see hazards and manage risk continuously.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.D.K1a</div>
+                  <strong>a. Effective team communication</strong>
+                  <span class="meta">Team communication: assertiveness, briefbacks, sterile periods when needed.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.D.K1b</div>
+                  <strong>b. Task management</strong>
+                  <span class="meta">Task manage: prioritize aviate/avoid/communicate; don’t fixate on the map while losing VLOS.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.D.K2</div>
+                  <strong>Crew Resource Management (CRM).</strong>
+                  <span class="meta">CRM: use all resources — VO, checklists, ATC info, weather products, automation — effectively.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.D · 2/2" data-section="V">
+  <p class="kicker">UA.V.D · Aeronautical Decision-Making</p>
+  <h1>V.D · 2/2</h1>
+  
+              <p class="lead">Task V.D — Aeronautical Decision-Making</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.D.K3</div>
+                  <strong>Situational awareness.</strong>
+                  <span class="meta">Situational awareness = accurate mental model of aircraft, environment, people, airspace, battery, link.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.D.K4</div>
+                  <strong>Hazardous attitudes.</strong>
+                  <span class="meta">Five hazardous attitudes: anti-authority, impulsivity, invulnerability, macho, resignation — and their antidotes.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.D.K5</div>
+                  <strong>Hazard identification and risk assessment.</strong>
+                  <span class="meta">Identify hazards → assess severity/likelihood → mitigate or cancel. PAVE / 3P / DECIDE / IMSAFE.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.E · 1/3" data-section="V">
+  <p class="kicker">UA.V.E · Physiology</p>
+  <h1>V.E · 1/3</h1>
+  
+              <p class="lead">Task V.E — Physiology</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K1</div>
+                  <strong>Physiological considerations and their effects on safety such as dehydration and heatstroke.</strong>
+                  <span class="meta">Heat, dehydration, cold reduce judgment and reaction time — schedule breaks/shade/water.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K2</div>
+                  <strong>Drug and alcohol use.</strong>
+                  <span class="meta">Alcohol: 0.04% BAC limit; 8-hour bottle-to-throttle culture; hangover still impairs.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K3</div>
+                  <strong>Prescription and over-the-counter medication.</strong>
+                  <span class="meta">OTC/prescription meds can sedate or distort vision — check “IMSAFE — Medication.”</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K4</div>
+                  <strong>Hyperventilation.</strong>
+                  <span class="meta">Hyperventilation: anxiety → too much CO2 blown off → dizziness/tingling; slow breathing.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.E · 2/3" data-section="V">
+  <p class="kicker">UA.V.E · Physiology</p>
+  <h1>V.E · 2/3</h1>
+  
+              <p class="lead">Task V.E — Physiology</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K5</div>
+                  <strong>Stress and fatigue.</strong>
+                  <span class="meta">Stress/fatigue are top human-factor drivers — personal minimums beat external pressure.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K6</div>
+                  <strong>Factors affecting vision.</strong>
+                  <span class="meta">Vision: empty-field myopia, glare, sunglasses, scanning technique.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K7</div>
+                  <strong>Fitness for flight.</strong>
+                  <span class="meta">IMSAFE: Illness, Medication, Stress, Alcohol, Fatigue, Emotion.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K8</div>
+                  <strong>Physiological aspects of night operation.</strong>
+                  <span class="meta">Night vision needs ~30 min dark adaptation; avoid bright white light; use scanning off-center.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.E · 3/3" data-section="V">
+  <p class="kicker">UA.V.E · Physiology</p>
+  <h1>V.E · 3/3</h1>
+  
+              <p class="lead">Task V.E — Physiology</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.E.K9</div>
+                  <strong>Night illusions.</strong>
+                  <span class="meta">Night illusions: autokinesis, false horizons, confusion with ground lights — trust instruments/telemetry + VO.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.F · 1/2" data-section="V">
+  <p class="kicker">UA.V.F · Maintenance &amp; Inspection</p>
+  <h1>V.F · 1/2</h1>
+  
+              <p class="lead">Task V.F — Maintenance &amp; Inspection</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.F.K1</div>
+                  <strong>Basic maintenance.</strong>
+                  <span class="meta">Follow manufacturer maintenance; inspect props, motors, frame, batteries, antennas, sensors.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.F.K2</div>
+                  <strong>Preflight inspection.</strong>
+                  <span class="meta">Preflight every flight: airframe, controls, link, GPS/compass, battery %/health, firmware, calendar/NOTAM/airspace.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.F.K3</div>
+                  <strong>Techniques to mitigate mechanical failures of all elements used in sUAS operations such as the battery and any device(s) used to operate the sUAS.</strong>
+                  <span class="meta">Mitigate failures: prop spares, battery margins, redundant links if available, geofence awareness, abort criteria.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.F.K4</div>
+                  <strong>Appropriate record keeping.</strong>
+                  <span class="meta">Log maintenance/firmware/prop changes — especially when required for category eligibility.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="V.F · 2/2" data-section="V">
+  <p class="kicker">UA.V.F · Maintenance &amp; Inspection</p>
+  <h1>V.F · 2/2</h1>
+  
+              <p class="lead">Task V.F — Maintenance &amp; Inspection</p>
+              <div class="grid two">
+                <div class="card kcard">
+                  <div class="acs">UA.V.F.K5</div>
+                  <strong>Persons that may perform maintenance on an sUAS.</strong>
+                  <span class="meta">Owner/operator/remote PIC typically performs maintenance unless manufacturer requires qualified persons (esp. Cat 4).</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.F.K6</div>
+                  <strong>Preflight inspection for night operations.</strong>
+                  <span class="meta">Night preflight adds lighting check: anti-collision visible, orientation lights if used, ground lighting for crew.</span>
+                </div>
+                <div class="card kcard">
+                  <div class="acs">UA.V.F.K7</div>
+                  <strong>Manufacturer&#x27;s Declaration of Compliance for Category 2 and 3 operations.</strong>
+                  <span class="meta">For Cat 2/3, manufacturer DoC must remain valid; maintain per instructions that support the DoC.</span>
+                </div></div>
+            
+</section><section class="slide" data-title="Authorization matrix" data-section="II">
+  <p class="kicker">Airspace quick sheet</p>
+  <h1>Authorization matrix</h1>
+  
+<table>
+  <thead><tr><th>Class</th><th>Chart cue</th><th>Part 107</th></tr></thead>
+  <tbody>
+    <tr><td><b>B</b></td><td>Solid blue rings / cake</td><td class="num">ATC authorization required</td></tr>
+    <tr><td><b>C</b></td><td>Solid magenta rings</td><td class="num">ATC authorization required</td></tr>
+    <tr><td><b>D</b></td><td>Dashed blue</td><td class="num">ATC authorization required</td></tr>
+    <tr><td><b>E surface</b></td><td>Dashed magenta</td><td class="num">Auth if designated for airport</td></tr>
+    <tr><td><b>E lofted</b></td><td>700/1200 vignettes</td><td>Usually no auth below the shelf</td></tr>
+    <tr><td><b>G</b></td><td>Everything else to overlying E</td><td class="num">No ATC auth</td></tr>
+  </tbody>
+</table>
+<div class="trap"><b>Trap:</b> Chart altitudes are MSL. Part 107 ceiling is AGL. Convert with field elevation.</div>
+
+</section><section class="slide" data-title="Special use + MTR" data-section="II">
+  <p class="kicker">SUA / MTR</p>
+  <h1>Special use + MTR</h1>
+  
+<table>
+  <thead><tr><th>Symbol</th><th>Meaning</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr><td>P</td><td>Prohibited</td><td>Stay out</td></tr>
+    <tr><td>R</td><td>Restricted</td><td>Permission / avoid when active</td></tr>
+    <tr><td>W</td><td>Warning</td><td>Extreme caution</td></tr>
+    <tr><td>MOA</td><td>Military operations</td><td>VFR OK; check if hot</td></tr>
+    <tr><td>A</td><td>Alert</td><td>High activity — caution</td></tr>
+    <tr><td>VR/IR</td><td>Military training route</td><td>4 digits ≤1500 AGL; 3 digits has segments &gt;1500 AGL</td></tr>
+  </tbody>
+</table>
+
+</section><section class="slide" data-title="METAR decode" data-section="III">
+  <p class="kicker">Weather decode</p>
+  <h1>METAR decode</h1>
+  
+<p class="mono" style="background:#243040;padding:.85rem 1rem;border-radius:8px;overflow:auto">METAR KGGG 161753Z AUTO 14021G26KT 3/4SM +TSRA BR BKN008 OVC012CB 18/17 A2970</p>
+<table>
+  <tbody>
+    <tr><td><code>14021G26KT</code></td><td>Wind 140° at 21 gusting 26</td></tr>
+    <tr><td><code>3/4SM</code></td><td>Vis ¾ SM — below Part 107 minimum</td></tr>
+    <tr><td><code>+TSRA</code></td><td>Heavy thunder shower rain</td></tr>
+    <tr><td><code>BKN008</code></td><td>Broken clouds at 800 AGL</td></tr>
+    <tr><td><code>18/17</code></td><td>Temp/dew °C — near saturation</td></tr>
+  </tbody>
+</table>
+
+</section><section class="slide" data-title="Hazardous attitudes" data-section="V">
+  <p class="kicker">ADM tools</p>
+  <h1>Hazardous attitudes</h1>
+  
+<table>
+  <thead><tr><th>Attitude</th><th>Antidote</th></tr></thead>
+  <tbody>
+    <tr><td>Anti-authority</td><td>Follow the rules — they are usually right</td></tr>
+    <tr><td>Impulsivity</td><td>Not so fast — think first</td></tr>
+    <tr><td>Invulnerability</td><td>It could happen to me</td></tr>
+    <tr><td>Macho</td><td>Taking chances is foolish</td></tr>
+    <tr><td>Resignation</td><td>I am not helpless — I can make a difference</td></tr>
+  </tbody>
+</table>
+<div class="ok-note"><b>IMSAFE:</b> Illness · Medication · Stress · Alcohol · Fatigue · Emotion &nbsp;|&nbsp; <b>PAVE:</b> Pilot · Aircraft · enVironment · External pressures</div>
+
+</section><section class="slide" data-title="Traffic pattern" data-section="V">
+  <p class="kicker">Airport ops</p>
+  <h1>Traffic pattern</h1>
+  
+<p class="lead">RWY number ≈ magnetic heading / 10. Standard pattern is left traffic unless charted right.</p>
+<div class="grid two">
+  <div class="card"><strong>Left downwind RWY 13</strong><span class="meta">Parallel to runway 13, flying opposite the landing direction (~310°), airport on your left.</span></div>
+  <div class="card"><strong>Why it matters</strong><span class="meta">Chart questions (Fig 26) ask where you are relative to the runway and whether auth is needed.</span></div>
+</div>
+
+</section><section class="slide" data-title="Accident reporting" data-section="I">
+  <p class="kicker">UA.I.A.K4</p>
+  <h1>Accident reporting</h1>
+  
+<div class="grid two">
+  <div class="card"><strong>Report to FAA within 10 calendar days if</strong><span class="meta">Serious injury or loss of consciousness<br/>OR property damage (other than UA) with repair/fair market ≥ $500</span></div>
+  <div class="card"><strong>Also know</strong><span class="meta">NTSB has its own unmanned aircraft accident definition — some events require NTSB notification as well.</span></div>
+</div>
+
+</section><section class="slide" data-title="Remote ID paths" data-section="I">
+  <p class="kicker">Part 89</p>
+  <h1>Remote ID paths</h1>
+  
+<div class="grid three">
+  <div class="card"><strong>1. Standard RID</strong><span class="meta">Built-in broadcast of required message elements</span></div>
+  <div class="card"><strong>2. Broadcast module</strong><span class="meta">Add-on module secured to the aircraft</span></div>
+  <div class="card"><strong>3. FRIA</strong><span class="meta">Fly inside an FAA-Recognized Identification Area</span></div>
+</div>
+<div class="trap"><b>Don’t confuse:</b> Remote ID broadcast ≠ ADS-B Out (generally prohibited for Part 107 unless authorized).</div>
+
+</section><section class="slide" data-title="Over people categories" data-section="I">
+  <p class="kicker">UA.I.E</p>
+  <h1>Over people categories</h1>
+  
+<table>
+  <thead><tr><th>Cat</th><th>Core idea</th><th>Open-air assembly</th></tr></thead>
+  <tbody>
+    <tr><td><b>1</b></td><td>≤ 0.55 lb; no lacerating exposed rotors</td><td>Allowed if RID met</td></tr>
+    <tr><td><b>2</b></td><td>MoC + DoC; injury limits</td><td>Allowed if RID met</td></tr>
+    <tr><td><b>3</b></td><td>MoC + DoC; higher injury thresholds</td><td class="num">NOT for sustained flight over assemblies</td></tr>
+    <tr><td><b>4</b></td><td>Type-certificated + operating limitations</td><td>If limitations allow</td></tr>
+  </tbody>
+</table>
+
+</section><section class="slide" data-title="Certificate path" data-section="I">
+  <p class="kicker">Getting the license</p>
+  <h1>Certificate path</h1>
+  
+<ol>
+  <li>Study ACS topics (this deck).</li>
+  <li>Create an FAA account / obtain tracking number as required for testing.</li>
+  <li>Pass UAG knowledge test (≥70%) at a PSI center.</li>
+  <li>Apply via IACRA → TSA security vetting → Temporary then plastic certificate.</li>
+  <li>Complete recurrent training within every 24 calendar-months.</li>
+</ol>
+<div class="ok-note">Eligibility: at least <b>16</b>, English proficient, pass test (or eligible Part 61 path), pass security vetting.</div>
+
+</section><section class="slide" data-title="Study finish line" data-section="End">
+  <p class="kicker">Next steps</p>
+  <h1>Study finish line</h1>
+  
+<div class="grid three">
+  <div class="card"><strong>1. Finish Areas I–V</strong><span class="meta">Don’t skip Operations — it’s 35–45% of the test.</span></div>
+  <div class="card"><strong>2. Chart figures</strong><span class="meta">Figs 12, 20–23, 26, 59 in the quiz app.</span></div>
+  <div class="card"><strong>3. Timed mocks</strong><span class="meta">Hit consistent ≥80% before you schedule PSI.</span></div>
+</div>
+<div class="trap" style="margin-top:1rem"><b>Commercial ops reminder:</b> Certificate alone isn’t enough on a job — you still need registration, Remote ID compliance, airspace authorization, and a safe Part 107 operation.</div>
+
+</section><section class="slide" data-title="Contents" data-section="End">
+  <p class="kicker">Jump</p>
+  <h1>Contents</h1>
+  
+<div class="grid two" id="outline"></div>
+
+</section>
+</div>
+<div class="bar">
+  <button type="button" id="prev">← Prev</button>
+  <div class="progress"><i id="bar"></i></div>
+  <span id="pos">1 / 1</span>
+  <button type="button" id="next">Next →</button>
+</div>
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('.slide')];
+  const pos = document.getElementById('pos');
+  const bar = document.getElementById('bar');
+  const outline = document.getElementById('outline');
+  let i = 0;
+  slides.forEach((s, idx) => {
+    if (!outline) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'outline-btn';
+    b.innerHTML = `<strong>${idx+1}. ${s.dataset.title}</strong><div class="meta" style="color:#8b9aab;font-size:.82rem;margin-top:.2rem">${s.dataset.section}</div>`;
+    b.onclick = () => go(idx);
+    outline.appendChild(b);
+  });
+  function go(n) {
+    i = Math.max(0, Math.min(slides.length-1, n));
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    pos.textContent = `${i+1} / ${slides.length}`;
+    bar.style.width = `${((i+1)/slides.length)*100}%`;
+    history.replaceState(null,'',`#${i+1}`);
+    document.querySelectorAll('#secnav button').forEach(btn => {
+      btn.classList.toggle('on', btn.dataset.jump === slides[i].dataset.section);
+    });
+  }
+  document.getElementById('prev').onclick = () => go(i-1);
+  document.getElementById('next').onclick = () => go(i+1);
+  document.querySelectorAll('#secnav button').forEach(btn => {
+    btn.onclick = () => {
+      const idx = slides.findIndex(s => s.dataset.section === btn.dataset.jump);
+      if (idx >= 0) go(idx);
+    };
+  });
+  window.addEventListener('keydown', e => {
+    if (['ArrowRight','PageDown','Space'].includes(e.code) || e.key === ' ') { e.preventDefault(); go(i+1); }
+    else if (['ArrowLeft','PageUp','Backspace'].includes(e.code)) { e.preventDefault(); go(i-1); }
+    else if (e.key === 'Escape') go(slides.length-1);
+    else if (e.key === 'Home') go(0);
+  });
+  const hash = parseInt(location.hash.slice(1), 10);
+  go(Number.isFinite(hash) && hash >= 1 ? hash-1 : 0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Part 107 Quick Review</title>
+<style>
+:root{--bg:#0f1419;--panel:#1a222c;--ink:#e8eef4;--muted:#8b9aab;--accent:#3db8a8;--warn:#e8a04b;--ok:#6bcb8b;--line:#2a3542}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:system-ui,sans-serif;font-size:18px}
+.deck{height:100%;display:grid;place-items:center;padding:1.2rem 1.2rem 4.5rem}
+.slide{display:none;width:min(920px,100%);min-height:min(560px,calc(100vh - 5.5rem));background:#1a222c;border:1px solid var(--line);border-radius:14px;padding:1.8rem}
+.slide.active{display:block}.kicker{color:var(--accent);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+h1{margin:.4rem 0 1rem}.lead{color:var(--muted)}ul{padding-left:1.1rem}li{margin:.4rem 0}
+.grid{display:grid;gap:.75rem;grid-template-columns:repeat(2,1fr);margin-top:.8rem}
+.card{background:#243040;border:1px solid var(--line);border-radius:10px;padding:.85rem}.card strong{display:block;margin-bottom:.25rem}.meta{color:var(--muted);font-size:.9rem}
+.trap{margin-top:1rem;padding:.8rem;border-left:3px solid var(--warn);background:rgba(232,160,75,.08)}.num{color:var(--accent);font-weight:700}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:1rem;align-items:center;padding:.7rem 1rem;background:rgba(15,20,25,.95);border-top:1px solid var(--line);color:var(--muted)}
+button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.45rem .8rem;font:inherit;cursor:pointer}
+.progress{flex:1;height:4px;background:var(--line);border-radius:99px;overflow:hidden}.progress>i{display:block;height:100%;background:var(--accent);width:0}
+table{width:100%;border-collapse:collapse}td,th{padding:.45rem;border-bottom:1px solid var(--line);text-align:left}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<div class="deck">
+<section class="slide active"><p class="kicker">Quick review</p><h1>Part 107 commercial — traps only</h1><p class="lead">Use the <a href="part107-full.html" style="color:#3db8a8">full ACS deck</a> for complete coverage. This is the night-before checklist.</p>
+<div class="grid">
+<div class="card"><strong class="num">400 AGL · 87 kt · 3 SM</strong><span class="meta">Altitude · speed · visibility</span></div>
+<div class="card"><strong class="num">500 / 2000</strong><span class="meta">Below / horizontal from clouds</span></div>
+<div class="card"><strong class="num">0.04% · 10 days · $500</strong><span class="meta">BAC · report window · damage</span></div>
+<div class="card"><strong class="num">16 yrs · 24 mo</strong><span class="meta">Min age · recurrent</span></div>
+</div></section>
+<section class="slide"><p class="kicker">Airspace</p><h1>Auth matrix</h1>
+<table><tr><td>B / C / D / surface E</td><td class="num">ATC auth required</td></tr>
+<tr><td>G (and most lofted E)</td><td class="num">No ATC auth</td></tr>
+<tr><td>Charts = MSL</td><td>Part 107 ceiling = AGL</td></tr></table>
+<div class="trap"><b>Trap:</b> Below 400 ft ≠ legal in controlled airspace without authorization.</div></section>
+<section class="slide"><p class="kicker">Ops</p><h1>Always true</h1>
+<ul>
+<li>VLOS unaided (FPV alone doesn’t count)</li>
+<li>Yield to all manned aircraft</li>
+<li>One PIC → one aircraft</li>
+<li>Remote ID: standard / module / FRIA</li>
+<li>Night: anti-collision light ≥ 3 SM</li>
+<li>RPIC is always responsible</li>
+</ul></section>
+<section class="slide"><p class="kicker">Finish</p><h1>Before the PSI test</h1>
+<ol>
+<li>Full ACS deck Areas I–V</li>
+<li>Quiz charts (Figs 12, 20–23, 26, 59)</li>
+<li>Timed mocks ≥ 80%</li>
+</ol>
+<p class="lead"><a href="part107-full.html" style="color:#3db8a8">Open full deck →</a></p></section>
+</div>
+<div class="bar"><button id="prev">←</button><div class="progress"><i id="bar"></i></div><span id="pos"></span><button id="next">→</button></div>
+<script>
+const S=[...document.querySelectorAll('.slide')];let i=0;
+const go=n=>{i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,x)=>s.classList.toggle('active',x===i));pos.textContent=`${i+1}/${S.length}`;bar.style.width=`${(i+1)/S.length*100}%`};
+prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
+addEventListener('keydown',e=>{if(['ArrowRight','Space'].includes(e.code)||e.key===' '){e.preventDefault();go(i+1)}if(e.code==='ArrowLeft')go(i-1)});
+go(0);
+</script></body></html>

@@ -1,0 +1,48 @@
+2-2
+Appendix 2
+0°
+10°
+30°
+45°
+60°
+70°
+80°
+85°
+90°
+ 
+1.0
+ 
+1.015
+ 
+1.154
+ 
+1.414
+ 
+2.000
+ 
+2.923
+ 
+5.747
+ 
+11.473
+        ∞
+Load 
+factor
+n
+Angle of 
+bank
+o
+Load factor chart
+Bank angle – in degrees
+Load factor – G units
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0 10 20 30 40 50 60 70 80 90
+Figure 2.  Load Factor Chart.

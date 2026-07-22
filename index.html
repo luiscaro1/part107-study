@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Part 107 Commercial Study</title>
+  <meta name="description" content="Part 107 Remote Pilot (sUAS) knowledge-test study kit — quiz lab and ACS slides." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --panel: #121a2b;
+      --panel-2: #182235;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #5b9cff;
+      --teal: #3db8a8;
+      --border: rgba(232, 238, 252, 0.12);
+      --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.5;
+      background:
+        radial-gradient(1100px 560px at 8% -12%, #1a2a4a 0%, transparent 55%),
+        radial-gradient(900px 480px at 100% 0%, #12283a 0%, transparent 50%),
+        var(--bg);
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 22px 72px;
+    }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin: 0 0 10px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 4vw, 2.45rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .lede {
+      margin: 0 0 28px;
+      color: var(--muted);
+      max-width: 54ch;
+      font-size: 1.05rem;
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.15rem 1.2rem 1.25rem;
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+    a.card:hover {
+      border-color: rgba(61, 184, 168, 0.55);
+      background: var(--panel-2);
+      transform: translateY(-1px);
+    }
+    a.card.primary { border-color: rgba(91, 156, 255, 0.45); }
+    a.card h2 {
+      margin: 0 0 6px;
+      font-size: 1.12rem;
+      color: var(--accent);
+    }
+    a.card.primary h2 { color: var(--teal); }
+    a.card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .map {
+      margin-top: 28px;
+      padding: 1rem 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(18, 26, 43, 0.65);
+    }
+    .map h3 {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+      font-family: var(--mono);
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .map ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
+    }
+    .map li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.92rem;
+    }
+    .map span { color: var(--muted); font-family: var(--mono); font-size: 0.85rem; }
+    footer {
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">FAA UAG · Remote Pilot (sUAS)</p>
+    <h1>Part 107 Commercial Study</h1>
+    <p class="lede">
+      Knowledge-test kit: practice quizzes with chart figures, plus ACS study decks for Areas I–V.
+    </p>
+
+    <div class="grid">
+      <a class="card primary" href="quiz-app/">
+        <h2>Quiz Lab</h2>
+        <p>Learn-by-testing · figures inline · every item includes “I don’t know.”</p>
+      </a>
+      <a class="card" href="slides/part107-full.html">
+        <h2>Full ACS deck</h2>
+        <p>All test material across Areas I–V (176 knowledge elements).</p>
+      </a>
+      <a class="card" href="slides/quick.html">
+        <h2>Quick review</h2>
+        <p>High-yield traps only — fast pre-exam pass.</p>
+      </a>
+      <a class="card" href="slides/">
+        <h2>Slides home</h2>
+        <p>Chooser page for full deck vs quick review.</p>
+      </a>
+    </div>
+
+    <section class="map" aria-label="Exam topic weights">
+      <h3>ACS exam map</h3>
+      <ul>
+        <li>I Regulations <span>15–25%</span></li>
+        <li>II Airspace <span>15–25%</span></li>
+        <li>III Weather <span>11–16%</span></li>
+        <li>IV Loading &amp; Performance <span>7–11%</span></li>
+        <li>V Operations <span>35–45%</span></li>
+      </ul>
+    </section>
+
+    <footer>
+      FAA publications are U.S. government works.
+      Source: <a href="https://github.com/luiscaro1/part107-study">luiscaro1/part107-study</a>
+    </footer>
+  </main>
+</body>
+</html>

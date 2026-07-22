@@ -1,0 +1,12 @@
+.DS_Store
+venv/
+__pycache__/
+*.pyc
+.Python
+*.egg-info/
+.quiz-progress.json
+progress.json
+node_modules/
+# FAA testing supplement is ~167MB (over GitHub 100MB limit). Download locally:
+# https://www.faa.gov/training_testing/testing/supplements/media/sport_rec_private_akts.pdf
+source/testing_supplement.pdf
